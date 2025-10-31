@@ -1,7 +1,18 @@
 @import "tailwindcss";
 
+body {
+    font-family: 'General Sans', sans-serif;
+    width: 100dvw;
+    background-color: #dfdff0;
+    overflow-x: hidden;
+}
+
+
+
+
 @theme {
   --color-mint-500: oklch(0.72 0.11 178);
+  --color-blue-50: #fff;
   --font-circular: "circular-web";
   --font-general: "general";
   --font-robertm: "robert-medium";
