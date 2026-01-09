@@ -12,6 +12,7 @@ const Hero = () => {
   const handleVideoLoad = () => {
   setLoadedVideos(prev => prev + 1);
 };
+
   const handleMiniVdClick = () => {
     setHasClicked(true);
     setCurrentIndex(prevIndex => prevIndex + 1);
