@@ -14,7 +14,6 @@ const Hero = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedVideos, setLoadedVideos] = useState(0);
   
-
   const totalVideos = 4 ;
   const miniVideoRef = useRef(null);
   const nextVideoRef = useRef(null);
@@ -27,19 +26,16 @@ const Hero = () => {
     setCurrentIndex(prev => (prev % totalVideos) + 1);
   };
 
-
   useEffect (() => {
     if(loadedVideos === totalVideos - 1) {
       setIsLoading(false);
     }
   }, [loadedVideos])
 
-
   useGSAP(
   () => {
     if (hasClicked) {
       gsap.set('#next-video', { visibility: 'visible' });
-
       gsap.to('#next-video', {
         transformOrigin: 'center center',
         scale: 1,
@@ -79,8 +75,6 @@ useGSAP(() => {
     }
   })
 });
-
-
 
   const getVideoSrc = index => `/videos/hero-${index}.mp4`;
 
@@ -142,10 +136,8 @@ useGSAP(() => {
           <div className='mt-24 px-5 sm:px-10'>
             <h1 className='special-font hero-heading text-blue-100'>redefi<b>n</b>e</h1>
 
-            <p className='mb-5 max-w-64 font-robert-regular text-blue-100'>Enter the Metagame Layer <br /> Unleash the Play Economy</p>
-
+            <p className='mb-5 max-w-64 font-robert-regular text-blue-100'>Enter the Metagame Layerr <br /> Unleash the Play Economy</p>
             <Button id="watch-trailer" title="Watch Trailer" leftIcon={<TiLocationArrow></TiLocationArrow>} containerClass = "bg-yellow flex-center gap-1"></Button>
-
           </div>
         </div>
       </div>
